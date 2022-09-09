@@ -5,5 +5,7 @@ import com.gg.movieapp.data.source.remote.*
 import org.koin.dsl.module
 
 val DataSourceModule = module {
-    single<MovieDataSource.Remote> {MovieTrendingRemoteImpl(get())}
+    single<MovieDataSource.Remote> { MovieTrendingRemoteImpl(get()) }
+
+    single<AuthenticationDataSource.Remote> { AuthenticationRemoteImpl(get()) }
 }
